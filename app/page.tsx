@@ -1,0 +1,127 @@
+import Hadiith from "@/components/Hadiith";
+export default function Home() {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-[#07130f] text-white flex flex-col items-center justify-center px-6">
+
+   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.25),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.22),transparent_30%)]" />
+      <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-6">
+  <div className="flex items-center gap-3">
+    <div className="h-10 w-10 rounded-2xl bg-amber-300 flex items-center justify-center text-black font-bold">
+      ن
+    </div>
+
+    <span className="text-2xl font-semibold tracking-tight">
+      noory.ai
+    </span>
+  </div>
+
+  <div className="hidden md:flex items-center gap-8 text-gray-300">
+    <a href="#" className="hover:text-amber-300 transition">
+      Vision
+    </a>
+
+    <a href="#" className="hover:text-amber-300 transition">
+      Features
+    </a>
+
+    <a href="#" className="hover:text-amber-300 transition">
+      Contact
+    </a>
+  </div>
+</nav>
+      <div className="relative z-10 max-w-4xl text-center">
+        <p className="mb-6 text-amber-300 font-medium tracking-[0.2em] uppercase">
+          Quellenbasierte islamische AI
+        </p>
+
+        <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
+          noory.ai
+        </h1>
+
+        <p className="mt-8 text-xl leading-8 text-gray-300">
+          Islamisches Wissen mit Quellen, Kontext und Verantwortung.
+        </p>
+
+        <p className="mt-4 text-lg text-gray-400">
+          Quraan, <Hadiith />, Tafsiir und Fiqh intelligent durchsuchen —
+          mit nachvollziehbaren Quellen statt Halluzinationen.
+        </p>
+        <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.06] p-3 shadow-2xl shadow-black/20 backdrop-blur-xl">
+  <div className="flex flex-col gap-3 sm:flex-row">
+    <input
+      type="text"
+      placeholder="Frage etwas über Quraan, Hadiith oder Fiqh..."
+      className="flex-1 rounded-xl bg-black/40 px-5 py-4 text-white outline-none placeholder:text-gray-500"
+    />
+
+    <button className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black hover:bg-amber-200 transition">
+      Suchen
+    </button>
+  </div>
+</div>
+<div className="mx-auto mt-6 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-left">
+  <div className="flex items-center gap-2">
+    <div className="h-3 w-3 rounded-full bg-emerald-400" />
+    <p className="text-sm text-emerald-300">
+      Quellenbasierte Antwort
+    </p>
+  </div>
+
+  <p className="mt-5 text-gray-200 leading-8">
+    Geduld wird im Quraan mehrfach als Eigenschaft der Mu'min erwähnt.
+    In Sure Al-baqarah 2:153 heißt es:
+  </p>
+
+  <div className="mt-5 rounded-2xl bg-black/30 p-5 border border-white/5">
+    <p className="text-lg text-amber-200">
+      „Ihr, die den Iimaan verinnerlicht habt! Helft euch mit Geduld und mit dem rituellen Gebet.“
+    </p>
+
+    <p className="mt-3 text-sm text-gray-500">
+      Quraan 2:153
+    </p>
+  </div>
+</div>
+
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button className="rounded-full bg-amber-300 px-8 py-4 text-black font-semibold transition duration-300 hover:-translate-y-1 hover:bg-amber-200">
+            Warteliste beitreten
+          </button>
+
+          <button className="rounded-full border border-white/20 px-8 py-4 text-white transition duration-300 hover:-translate-y-1 hover:border-amber-300 hover:text-amber-200">
+            Mehr erfahren
+          </button>
+        </div>
+        <div className="mt-14 grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:-translate-y-1 hover:border-amber-300/40 hover:bg-white/10">
+    <h3 className="font-semibold text-amber-300">Quellenbasiert</h3>
+    <p className="mt-2 text-sm text-gray-400">
+      Antworten mit nachvollziehbaren Referenzen statt erfundener Aussagen.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:-translate-y-1 hover:border-amber-300/40 hover:bg-white/10">
+    <h3 className="font-semibold text-amber-300">Mehrsprachig</h3>
+    <p className="mt-2 text-sm text-gray-400">
+      Arabisch, Deutsch, Englisch, Türkisch, Bosnisch und mehr.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:-translate-y-1 hover:border-amber-300/40 hover:bg-white/10">
+    <h3 className="font-semibold text-amber-300">Kein Mufti-Ersatz</h3>
+    <p className="mt-2 text-sm text-gray-400">
+      Noory.ai hilft bei Recherche und Lernen, ersetzt aber keine Gelehrten.
+    </p>
+  </div>
+</div>
+      </div>
+      <footer className="relative z-10 mt-24 pb-10 text-center text-sm text-gray-500">
+  <p>© 2026 Noory.ai</p>
+
+  <p className="mt-2">
+    Quellenbasierte islamische Recherche mit Verantwortung.
+  </p>
+</footer>
+    </main>
+  );
+}
