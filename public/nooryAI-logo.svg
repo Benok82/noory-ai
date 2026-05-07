@@ -1,0 +1,17 @@
+<svg width="420" height="104" viewBox="0 0 420 104" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">nooryAI logo</title>
+  <desc id="desc">Minimal geometric arch icon with nooryAI wordmark in off-white and amber gold.</desc>
+  <rect width="420" height="104" rx="0" fill="none"/>
+  <g transform="translate(18 13)" stroke="#FCD34D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 58V34C18 22 31 11 42 5C53 11 66 22 66 34V58"/>
+    <path d="M29 58V38C29 30 37 23 42 20C47 23 55 30 55 38V58"/>
+    <path d="M39 58V45C39 41 41 38 42 36C43 38 45 41 45 45V58" opacity="0.85"/>
+    <path d="M18 58L18 72L29 65"/>
+    <path d="M66 58L66 72L55 65"/>
+  </g>
+  <path d="M60 60L63 67L70 70L63 73L60 80L57 73L50 70L57 67L60 60Z" fill="#FCD34D"/>
+  <g font-family="Inter, Satoshi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="48" font-weight="500" letter-spacing="-1.8">
+    <text x="112" y="69" fill="#FAFAF9">noory</text>
+    <text x="255" y="69" fill="#FCD34D">AI</text>
+  </g>
+</svg>

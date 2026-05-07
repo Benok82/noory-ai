@@ -6,13 +6,13 @@ export default function Home() {
    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.25),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.22),transparent_30%)]" />
       <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-6">
   <div className="flex items-center gap-3">
-    <div className="h-10 w-10 rounded-2xl bg-amber-300 flex items-center justify-center text-black font-bold">
-      ن
-    </div>
+    <img
+  src="/nooryAI-logo.svg"
+  alt="Noory.ai Logo"
+  className="h-12 w-auto"
+/>
 
-    <span className="text-2xl font-semibold tracking-tight">
-      noory.ai
-    </span>
+    
   </div>
 
   <div className="hidden md:flex items-center gap-8 text-gray-300">
@@ -35,7 +35,7 @@ export default function Home() {
         </p>
 
         <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-          noory.ai
+          nooryAI
         </h1>
 
         <p className="mt-8 text-xl leading-8 text-gray-300">
