@@ -1,5 +1,36 @@
+"use client";
+import { createClient } from "@supabase/supabase-js";
+import { useState } from "react";
 import Hadiith from "@/components/Hadiith";
 export default function Home() {
+  const [email, setEmail] = useState("");
+const [loading, setLoading] = useState(false);
+async function joinWaitlist() {
+  if (!email) return;
+
+  setLoading(true);
+
+  const { error } = await supabase.from("waitlist").insert([
+    {
+      email,
+    },
+  ]);
+
+  if (error) {
+    alert("Fehler beim Speichern.");
+  } else {
+    alert("Willkommen bei NooryAI 🚀");
+    setEmail("");
+  }
+
+  setLoading(false);
+}
+  const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
+
+console.log("Supabase verbunden:", supabase);
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#07130f] text-white flex flex-col items-center justify-center px-6">
 
@@ -50,12 +81,17 @@ export default function Home() {
   <div className="flex flex-col gap-3 sm:flex-row">
     <input
       type="text"
-      placeholder="Frage etwas über Quraan, Hadiith oder Fiqh..."
+      value={email}
+onChange={(e) => setEmail(e.target.value)}
+      placeholder="Deine E-Mail Adresse"
       className="flex-1 rounded-xl bg-black/40 px-5 py-4 text-white outline-none placeholder:text-gray-500"
     />
 
-    <button className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black hover:bg-amber-200 transition">
-      Suchen
+    <button 
+    onClick={joinWaitlist}
+disabled={loading}
+    className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black hover:bg-amber-200 transition">
+      {loading ? "Speichert..." : "Warteliste beitreten"}
     </button>
   </div>
 </div>
