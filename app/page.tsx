@@ -4,8 +4,9 @@ import { useState } from "react";
 import Hadiith from "@/components/Hadiith";
 export default function Home() {
   const [email, setEmail] = useState("");
-const [loading, setLoading] = useState(false);
-async function joinWaitlist() {
+  const [loading, setLoading] = useState(false);
+const [message, setMessage] = useState("");
+  async function joinWaitlist() {
   if (!email) return;
 
   setLoading(true);
@@ -17,11 +18,16 @@ async function joinWaitlist() {
   ]);
 
   if (error) {
-    alert("Fehler beim Speichern.");
+  if (error.code === "23505") {
+    setMessage("Diese E-Mail ist bereits auf der Warteliste.");
   } else {
-    alert("Willkommen bei NooryAI 🚀");
-    setEmail("");
+    setMessage("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
   }
+} else {
+  setMessage("Willkommen bei nooryAI 🚀 Du bist auf der Warteliste.");
+  setEmail("");
+}
+  
 
   setLoading(false);
 }
@@ -88,11 +94,17 @@ onChange={(e) => setEmail(e.target.value)}
     />
 
     <button 
+    
     onClick={joinWaitlist}
 disabled={loading}
     className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black hover:bg-amber-200 transition">
       {loading ? "Speichert..." : "Warteliste beitreten"}
     </button>
+    {message && (
+  <p className="mt-4 text-sm text-emerald-300">
+    {message}
+  </p>
+)}
   </div>
 </div>
 <div className="mx-auto mt-6 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-left">
