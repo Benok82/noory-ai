@@ -6,6 +6,33 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 const [message, setMessage] = useState("");
+const [question, setQuestion] = useState("");
+const [answer, setAnswer] = useState("");
+async function askQuestion() {
+  if (!question) return;
+
+  setLoading(true);
+
+  try {
+    const response = await fetch("/api/ask", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        question,
+      }),
+    });
+
+    const data = await response.json();
+
+    setAnswer(data.answer);
+  } catch (error) {
+    console.error(error);
+  }
+
+  setLoading(false);
+}
   async function joinWaitlist() {
   if (!email) return;
 
@@ -85,50 +112,34 @@ console.log("Supabase verbunden:", supabase);
         </p>
         <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.06] p-3 shadow-2xl shadow-black/20 backdrop-blur-xl">
   <div className="flex flex-col gap-3 sm:flex-row">
-    <input
-      type="text"
-      value={email}
-onChange={(e) => setEmail(e.target.value)}
-      placeholder="Deine E-Mail Adresse"
-      className="flex-1 rounded-xl bg-black/40 px-5 py-4 text-white outline-none placeholder:text-gray-500"
-    />
+  <input
+    type="text"
+    value={question}
+    onChange={(e) => setQuestion(e.target.value)}
+    placeholder="Frage etwas über den Quran, Hadithe oder Fiqh..."
+    className="flex-1 rounded-xl bg-black/40 px-5 py-4 text-white outline-none"
+  />
 
-    <button 
-    
-    onClick={joinWaitlist}
-disabled={loading}
-    className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black hover:bg-amber-200 transition">
-      {loading ? "Speichert..." : "Warteliste beitreten"}
-    </button>
-    {message && (
-  <p className="mt-4 text-sm text-emerald-300">
-    {message}
-  </p>
-)}
-  </div>
+  <button
+    onClick={askQuestion}
+    disabled={loading}
+    className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black"
+  >
+    {loading ? "Denkt nach..." : "Fragen"}
+  </button>
 </div>
 <div className="mx-auto mt-6 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-left">
   <div className="flex items-center gap-2">
     <div className="h-3 w-3 rounded-full bg-emerald-400" />
     <p className="text-sm text-emerald-300">
-      Quellenbasierte Antwort
+      Demo-Antwort
+      
     </p>
   </div>
 
   <p className="mt-5 text-gray-200 leading-8">
-    Geduld wird im Quraan mehrfach als Eigenschaft der Mu'min erwähnt.
-    In Sure Al-baqarah 2:153 heißt es:
-  </p>
-
-  <div className="mt-5 rounded-2xl bg-black/30 p-5 border border-white/5">
-    <p className="text-lg text-amber-200">
-      „Ihr, die den Iimaan verinnerlicht habt! Helft euch mit Geduld und mit dem rituellen Gebet.“
-    </p>
-
-    <p className="mt-3 text-sm text-gray-500">
-      Quraan 2:153
-    </p>
-  </div>
+  {answer || "Stelle eine Frage über den Quraan, Hadiithe oder Fiqh."}
+</p>
 </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -158,18 +169,42 @@ disabled={loading}
   <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:-translate-y-1 hover:border-amber-300/40 hover:bg-white/10">
     <h3 className="font-semibold text-amber-300">Kein Mufti-Ersatz</h3>
     <p className="mt-2 text-sm text-gray-400">
-      Noory.ai hilft bei Recherche und Lernen, ersetzt aber keine Gelehrten.
+      nooryAI hilft bei Recherche und Lernen, ersetzt aber keine Gelehrten.
     </p>
   </div>
 </div>
       </div>
+      </div>
       <footer className="relative z-10 mt-24 pb-10 text-center text-sm text-gray-500">
-  <p>© 2026 Noory.ai</p>
+  <p>© 2026 nooryAI.com</p>
 
   <p className="mt-2">
     Quellenbasierte islamische Recherche mit Verantwortung.
   </p>
 </footer>
+<div className="mx-auto mt-20 max-w-2xl text-center">
+<h3 className="mb-4 text-2xl font-semibold text-white">
+  Frühzugang erhalten
+</h3>
+
+<p className="mb-6 text-white/60">
+  Trage dich in die Warteliste ein und erhalte frühen Zugang zu nooryAI.
+</p>
+<input
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  placeholder="Deine E-Mail Adresse"
+  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none"
+/>
+<button
+  onClick={joinWaitlist}
+  disabled={loading}
+  className="rounded-xl bg-amber-300 px-6 py-4 font-semibold text-black"
+>
+  {loading ? "Speichert..." : "Warteliste beitreten"}
+</button>
+    </div>
     </main>
   );
 }
