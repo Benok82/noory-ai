@@ -1,9 +1,11 @@
 import OpenAI from "openai";
 import { terminology } from "@/lib/noory-terminology";
+import { quraanVerses } from "@/data/quraan";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
 function applyTerminology(text: string) {
   let result = text;
 
@@ -12,6 +14,24 @@ function applyTerminology(text: string) {
   }
 
   return result;
+}
+
+function findQuraanSources(question: string) {
+  const lowerQuestion = question.toLowerCase();
+
+  if (lowerQuestion.includes("zakaah") || lowerQuestion.includes("zakat")) {
+    return quraanVerses.zakaah;
+  }
+
+  if (lowerQuestion.includes("ribaa") || lowerQuestion.includes("riba")) {
+    return quraanVerses.ribaa;
+  }
+
+  if (lowerQuestion.includes("siyaam") || lowerQuestion.includes("fasten")) {
+    return quraanVerses.siyaam;
+  }
+
+  return [];
 }
 
 const systemPrompt = [
@@ -71,13 +91,29 @@ export async function POST(req: Request) {
       );
     }
 
+    const sources = findQuraanSources(question);
+
+    const sourceText =
+      sources.length > 0
+        ? sources
+            .map((source) => `${source.surah} ${source.ayah}: ${source.text}`)
+            .join("\n")
+        : "Keine verifizierte Quraan-Quelle in der lokalen Datenbank gefunden.";
+
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       max_completion_tokens: 500,
       messages: [
         {
           role: "system",
-          content: systemPrompt,
+          content: `${systemPrompt}
+
+Lokale verifizierte Quraan-Quellen:
+${sourceText}
+
+Regel:
+Wenn lokale verifizierte Quraan-Quellen vorhanden sind, verwende sie bevorzugt und nenne sie am Ende unter "Quellen".
+Wenn keine lokale Quelle vorhanden ist, sage offen, dass keine verifizierte Quraan-Quelle in der lokalen Datenbank gefunden wurde.`,
         },
         {
           role: "user",
@@ -87,13 +123,13 @@ export async function POST(req: Request) {
     });
 
     const rawAnswer = completion.choices[0].message.content || "";
-const correctedAnswer = applyTerminology(rawAnswer);
+    const correctedAnswer = applyTerminology(rawAnswer);
 
-return Response.json({
-  answer: correctedAnswer,
-});
+    return Response.json({
+      answer: correctedAnswer,
+    });
   } catch (error) {
-    console.error(error);
+    console.error("ASK API ERROR:", error);
 
     return Response.json(
       {
