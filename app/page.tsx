@@ -8,10 +8,16 @@ export default function Home() {
 const [message, setMessage] = useState("");
 const [question, setQuestion] = useState("");
 const [answer, setAnswer] = useState("");
+const [error, setError] = useState("");
 async function askQuestion() {
-  if (!question) return;
+  if (!question.trim()) {
+    setError("Bitte gib eine Frage ein.");
+    return;
+  }
 
   setLoading(true);
+  setError("");
+  setAnswer("");
 
   try {
     const response = await fetch("/api/ask", {
@@ -26,12 +32,18 @@ async function askQuestion() {
 
     const data = await response.json();
 
+    if (!response.ok) {
+      setError(data.error || "Etwas ist schiefgelaufen.");
+      return;
+    }
+
     setAnswer(data.answer);
   } catch (error) {
     console.error(error);
+    setError("Keine Verbindung zum Server. Bitte versuche es erneut.");
+  } finally {
+    setLoading(false);
   }
-
-  setLoading(false);
 }
   async function joinWaitlist() {
   if (!email) return;
@@ -138,7 +150,7 @@ console.log("Supabase verbunden:", supabase);
   </div>
 
   <p className="mt-5 text-gray-200 leading-8">
-  {answer || "Stelle eine Frage über den Quraan, Hadiithe oder Fiqh."}
+  {error || answer || "Stelle eine Frage über den Quraan, Hadiithe oder Fiqh."}
 </p>
 </div>
 
