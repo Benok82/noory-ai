@@ -27,4 +27,45 @@ export const quraanVerses = {
       text: "O die ihr den Iimaan verinnerlicht habt, euch wurde der Siyaam vorgeschrieben, wie er denjenigen vor euch vorgeschrieben wurde.",
     },
   ],
+    tawhiid: [
+    {
+      surah: "al-Ichlaas",
+      ayah: "112:1",
+      text: "Sprich: ER ist ALLAAH, der Eine.",
+    },
+    {
+      surah: "al-Baqarah",
+      ayah: "2:163",
+      text: "Euer Ilaah ist ein einziger Ilaah. Es gibt keine Gottheit außer IHM.",
+    },
+  ],
+
+  schirk: [
+    {
+      surah: "an-Nisaa",
+      ayah: "4:48",
+      text: "ALLAAH vergibt nicht, dass Ihm etwas beigesellt wird.",
+    },
+  ],
+
+  salaah: [
+    {
+      surah: "al-Baqarah",
+      ayah: "2:43",
+      text: "Verrichtet die Salaah und entrichtet die Zakaah.",
+    },
+    {
+      surah: "Taa-Haa",
+      ayah: "20:14",
+      text: "Verrichte die Salaah zu Meinem Gedenken.",
+    },
+  ],
+
+  eltern: [
+    {
+      surah: "al-Israa",
+      ayah: "17:23",
+      text: "Sei gütig zu deinen Eltern.",
+    },
+  ],
 };
