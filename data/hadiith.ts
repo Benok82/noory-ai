@@ -331,36 +331,48 @@ export const hadiithCollection = {
   ],
 
   birrIthm: [
-    {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "27",
-      primarySources: ["Sahih Muslim"],
-      topic: "Rechtschaffenheit und Sünde",
-      keywords: ["sünde", "suende", "gewissen", "herz", "birr", "ithm"],
-      translation:
-        "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
-              explanation:
-        "Dieser Hadiith gehört zu den gewaltigen Hadiith Qudsi. ALLAAH hat Sich selbst die Ungerechtigkeit verboten und sie auch unter den Menschen verboten. Er zeigt die vollkommene Gerechtigkeit ALLAAHs und die Verantwortung des Menschen gegenüber seinen Mitmenschen.",
+  {
+    collection: "40 Hadiithe an-Nawawii",
+    number: "27",
+    primarySources: ["Sahih Muslim"],
+    topic: "Rechtschaffenheit und Sünde",
+    keywords: [
+      "sünde",
+      "suende",
+      "gewissen",
+      "herz",
+      "birr",
+      "ithm",
+      "rechtschaffenheit"
+    ],
 
-      lessons: [
-        "ALLAAH begeht niemals Ungerechtigkeit.",
-        "Jede Form von Dhulm ist verboten.",
-        "Menschen sind vollständig auf ALLAAH angewiesen.",
-        "Rechtleitung und Versorgung kommen von ALLAAH.",
-        "Jeder Mensch wird nach seinen Taten beurteilt."
-      ],
+    translation:
+      "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
 
-      practicalApplications: [
-        "Niemanden beleidigen oder unterdrücken.",
-        "Niemanden finanziell benachteiligen.",
-        "Vergebung bei ALLAAH suchen.",
-        "Bei Schwierigkeiten zuerst ALLAAH um Hilfe bitten."
-      ],
-      authenticity: "Sahih Muslim",
-      text:
-        "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
-    },
-  ],
+    explanation:
+      "Dieser Hadiith erklärt, dass Rechtschaffenheit eng mit gutem Charakter verbunden ist. Sünde wird daran erkannt, dass sie im Inneren Unruhe verursacht und man nicht möchte, dass andere Menschen davon erfahren. Der Hadiith zeigt, dass das Herz ein wichtiger Hinweisgeber sein kann, solange es durch Iimaan und Wissen geschult ist.",
+
+    lessons: [
+      "Rechtschaffenheit zeigt sich im guten Charakter.",
+      "Sünde verursacht innere Unruhe.",
+      "Ein reines Herz erkennt oft problematische Handlungen.",
+      "Der Maßstab bleibt die Scharii'ah und nicht nur das persönliche Gefühl.",
+      "Ein Muslim sollte sein Gewissen prüfen und Wissen suchen."
+    ],
+
+    practicalApplications: [
+      "Vor einer Handlung prüfen, ob sie innere Unruhe auslöst.",
+      "Nicht nur fragen, ob etwas erlaubt ist, sondern ob es den Charakter verbessert.",
+      "Bei Unsicherheit vertrauenswürdige Gelehrte oder Quellen konsultieren.",
+      "Handlungen meiden, die man vor rechtschaffenen Menschen verbergen möchte."
+    ],
+
+    authenticity: "Sahih Muslim",
+
+    text:
+      "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
+  },
+],
 
   schaden: [
     {
