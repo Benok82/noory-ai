@@ -75,6 +75,8 @@ const systemPrompt = [
 "- Wenn Primärquellen hinterlegt sind, nenne diese ausdrücklich.",
   "- Erfinde niemals Quraan-Aayaat oder Hadiithe.",
   "- Wenn lokale Quellen vorhanden sind, verwende diese bevorzugt.",
+  "- Wenn Wichtige Lehren vorhanden sind, gib sie unverändert als Liste aus.",
+"- Wenn Praktische Anwendungen vorhanden sind, gib sie unverändert als Liste aus.",
   "- Verwende nur die lokalen Quraan- und Hadiith-Quellen, wenn sie vorhanden sind.",
 "- Nenne keine zusätzlichen Hadiithe, Aayaat oder Quellen, die nicht im lokalen Quellenblock stehen.",
 "- Wenn du mehr Kontext gibst, kennzeichne ihn als allgemeine Erklärung und nicht als Quelle.",
@@ -90,6 +92,8 @@ const systemPrompt = [
 "- Authentizität:",
 "- Primärquellen:",
 "- Erklärung:",
+"- Wichtige Lehren:",
+"- Praktische Anwendungen:",
 "- Nenne verwendete Quellen am Ende der Antwort.",
 ].join("\n");
 
@@ -136,8 +140,20 @@ export async function POST(req: Request) {
                 ? `Transliteration: ${source.transliteration}`
                 : "",
               source.translation
-                ? `Übersetzung: ${source.translation}`
-                : `Text: ${source.text}`,
+  ? `Übersetzung: ${source.translation}`
+  : `Text: ${source.text}`,
+
+source.explanation
+  ? `Erklärung: ${source.explanation}`
+  : "",
+
+source.lessons
+  ? `Wichtige Lehren: ${source.lessons.join(" | ")}`
+  : "",
+
+source.practicalApplications
+  ? `Praktische Anwendungen: ${source.practicalApplications.join(" | ")}`
+  : "",
             ]
               .filter(Boolean)
               .join("\n")

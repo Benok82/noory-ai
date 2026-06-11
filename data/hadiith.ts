@@ -304,7 +304,24 @@ export const hadiithCollection = {
       number: "24",
       primarySources: ["Sahih Muslim"],
       topic: "Verbot der Ungerechtigkeit",
-      keywords: ["ungerechtigkeit", "unterdrückung", "unrecht", "dhulm"],
+      keywords: [
+  "ungerechtigkeit",
+  "unterdrückung",
+  "unrecht",
+  "dhulm",
+  "nawawi 24",
+  "nawawii 24",
+  "an-nawawi 24",
+  "an-nawawii 24",
+  "40 hadithe 24",
+  "40 hadiithe 24",
+  "nawawi nr 24",
+  "nawawii nr 24",
+  "nawawii nr. 24",
+"nawawi nr. 24",
+"an-nawawii nr. 24",
+"an-nawawi nr. 24"
+],
       translation:
         "O Meine Diener, ICH habe Mir Selbst die Ungerechtigkeit verboten und sie auch unter euch verboten.",
       authenticity: "Sahih Muslim",
@@ -322,6 +339,23 @@ export const hadiithCollection = {
       keywords: ["sünde", "suende", "gewissen", "herz", "birr", "ithm"],
       translation:
         "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
+              explanation:
+        "Dieser Hadiith gehört zu den gewaltigen Hadiith Qudsi. ALLAAH hat Sich selbst die Ungerechtigkeit verboten und sie auch unter den Menschen verboten. Er zeigt die vollkommene Gerechtigkeit ALLAAHs und die Verantwortung des Menschen gegenüber seinen Mitmenschen.",
+
+      lessons: [
+        "ALLAAH begeht niemals Ungerechtigkeit.",
+        "Jede Form von Dhulm ist verboten.",
+        "Menschen sind vollständig auf ALLAAH angewiesen.",
+        "Rechtleitung und Versorgung kommen von ALLAAH.",
+        "Jeder Mensch wird nach seinen Taten beurteilt."
+      ],
+
+      practicalApplications: [
+        "Niemanden beleidigen oder unterdrücken.",
+        "Niemanden finanziell benachteiligen.",
+        "Vergebung bei ALLAAH suchen.",
+        "Bei Schwierigkeiten zuerst ALLAAH um Hilfe bitten."
+      ],
       authenticity: "Sahih Muslim",
       text:
         "Die Rechtschaffenheit ist guter Charakter, und die Sünde ist das, was in deiner Brust Unruhe verursacht.",
