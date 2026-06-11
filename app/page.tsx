@@ -149,9 +149,46 @@ console.log("Supabase verbunden:", supabase);
     </p>
   </div>
 
-  <p className="mt-5 text-gray-200 leading-8">
-  {error || answer || "Stelle eine Frage über den Quraan, Hadiithe oder Fiqh."}
-</p>
+  <div className="mt-5 space-y-3 text-gray-200 leading-8">
+  {(error || answer || "Stelle eine Frage über den Quraan, Hadiithe oder Fiqh.")
+    .split("\n")
+    .map((line, index) => {
+      if (!line.trim()) return null;
+
+      if (
+        line.startsWith("📚") ||
+        line.startsWith("Thema:") ||
+        line.startsWith("Übersetzung:") ||
+        line.startsWith("Transliteration:") ||
+        line.startsWith("Arabisch:") ||
+        line.startsWith("Authentizität:") ||
+        line.startsWith("Primärquellen:") ||
+        line.startsWith("Erklärung:") ||
+        line.startsWith("Wichtige Lehren:") ||
+        line.startsWith("Praktische Anwendungen:")
+      ) {
+        return (
+          <p key={index} className="font-semibold text-emerald-300">
+            {line}
+          </p>
+        );
+      }
+
+      if (line.startsWith("- ")) {
+        return (
+          <p key={index} className="ml-4 text-gray-300">
+            • {line.replace("- ", "")}
+          </p>
+        );
+      }
+
+      return (
+        <p key={index} className="text-gray-200">
+          {line}
+        </p>
+      );
+    })}
+</div>
 </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
