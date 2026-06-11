@@ -81,6 +81,15 @@ const systemPrompt = [
 "- Unterscheide zwischen Primärquellen und Sekundärquellen.",
 "- Bei Hadiithen sind Primärquellen (z.B. Sahih al-Buchari, Sahih Muslim) wichtiger als spätere Sammlungen.",
 "- Wenn Primärquellen in der lokalen Datenbank hinterlegt sind, nenne diese ausdrücklich.",
+"- Verwende bei Hadiith-Antworten immer dieses Format:",
+"- 📚 Hadiith an-Nawawii Nr. X",
+"- Thema:",
+"- Übersetzung:",
+"- Transliteration:",
+"- Arabisch:",
+"- Authentizität:",
+"- Primärquellen:",
+"- Erklärung:",
 "- Nenne verwendete Quellen am Ende der Antwort.",
 ].join("\n");
 
