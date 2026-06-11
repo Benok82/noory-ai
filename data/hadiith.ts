@@ -216,15 +216,47 @@ export const hadiithCollection = {
 
   zorn: [
     {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "16",
-      primarySources: ["Sahih al-Buchari"],
-      topic: "Zorn vermeiden",
-      keywords: ["zorn", "wut", "ärger", "aggression", "streit", "ausrasten"],
-      translation: "Werde nicht zornig.",
-      authenticity: "Sahih al-Buchari",
-      text: "Werde nicht zornig.",
-    },
+  collection: "40 Hadiithe an-Nawawii",
+  number: "16",
+  primarySources: ["Sahih al-Buchari"],
+  topic: "Zorn vermeiden",
+
+  keywords: [
+    "zorn",
+    "wut",
+    "ärger",
+    "aggression",
+    "streit",
+    "ausrasten"
+  ],
+
+  translation:
+    "Werde nicht zornig.",
+
+  explanation:
+    "Der Prophet ﷺ gab diesen kurzen Rat, weil Zorn zu vielen Sünden und ungerechten Handlungen führen kann. Wahre Stärke zeigt sich nicht darin, andere zu überwältigen, sondern darin, sich selbst im Moment des Zorns zu beherrschen.",
+
+  lessons: [
+    "Zorn kann zu Sünden führen.",
+    "Selbstbeherrschung gehört zu den Eigenschaften der Gläubigen.",
+    "Wahre Stärke ist die Kontrolle über die eigenen Emotionen.",
+    "Viele Konflikte entstehen durch unkontrollierte Wut.",
+    "Geduld schützt vor Reue und Fehlentscheidungen."
+  ],
+
+  practicalApplications: [
+    "Bei Wut zuerst schweigen.",
+    "Vor einer Reaktion kurz innehalten.",
+    "Wudu verrichten, wenn Zorn aufkommt.",
+    "ALLAAH um Schutz vor Schaytaan bitten.",
+    "Entscheidungen nicht im Zustand des Zorns treffen."
+  ],
+
+  authenticity: "Sahih al-Buchari",
+
+  text:
+    "Werde nicht zornig.",
+},
   ],
 
   taqwaa: [
@@ -406,16 +438,46 @@ export const hadiithCollection = {
 
   neid: [
     {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "35",
-      primarySources: ["Sahih Muslim"],
-      topic: "Neid und Brüderlichkeit",
-      keywords: ["neid", "hass", "eifersucht", "brüderlichkeit", "gemeinschaft"],
-      translation:
-        "Neidet einander nicht, hasst einander nicht und seid Diener ALLAAHs als Brüder.",
-      authenticity: "Sahih Muslim",
-      text:
-        "Neidet einander nicht, hasst einander nicht und seid Diener ALLAAHs als Brüder.",
-    },
+  collection: "40 Hadiithe an-Nawawii",
+  number: "35",
+  primarySources: ["Sahih Muslim"],
+  topic: "Neid und Brüderlichkeit",
+
+  keywords: [
+    "neid",
+    "hass",
+    "eifersucht",
+    "hasad",
+    "brüderlichkeit",
+    "gemeinschaft"
+  ],
+
+  translation:
+    "Neidet einander nicht, hasst einander nicht und seid Diener ALLAAHs als Brüder.",
+
+  explanation:
+    "Dieser Hadiith betont die Bedeutung der Brüderlichkeit innerhalb der muslimischen Gemeinschaft. Neid und Hass zerstören Beziehungen und führen zu Spaltung. Der Islam ruft zu Liebe, Zusammenhalt und gegenseitigem Wohlwollen auf.",
+
+  lessons: [
+    "Neid gehört zu den zerstörerischen Eigenschaften des Herzens.",
+    "Muslime sollen einander lieben und unterstützen.",
+    "Hass und Feindschaft widersprechen der islamischen Brüderlichkeit.",
+    "Die Ummah soll auf Zusammenhalt aufgebaut sein.",
+    "Ein Gläubiger freut sich über das Gute seiner Geschwister."
+  ],
+
+  practicalApplications: [
+    "Für andere Muslime Du'a machen.",
+    "Sich über den Erfolg anderer freuen.",
+    "Vergleiche vermeiden, die Neid fördern.",
+    "Dankbarkeit für die eigenen Gaben zeigen.",
+    "Streit und Feindschaft aktiv beenden."
+  ],
+
+  authenticity: "Sahih Muslim",
+
+  text:
+    "Neidet einander nicht, hasst einander nicht und seid Diener ALLAAHs als Brüder.",
+},
   ],
 };
