@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { quraanVerses } from "@/data/quraan";
 import { hadiithCollection } from "@/data/hadiith";
+import { hadithDatabase } from "@/data/hadith-database";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -62,6 +63,22 @@ function findHadiithSources(question: string) {
 
   return results;
 }
+function findHadithDatabaseSources(question: string) {
+  const lowerQuestion = question.toLowerCase();
+
+  return hadithDatabase.filter((hadith) => {
+    const keywordMatch =
+      hadith.keywords?.some((keyword) =>
+        lowerQuestion.includes(keyword.toLowerCase())
+      ) || false;
+
+    const referenceMatch =
+      lowerQuestion.includes(hadith.reference.toLowerCase()) ||
+      lowerQuestion.includes(hadith.number.toLowerCase());
+
+    return keywordMatch || referenceMatch;
+  });
+}
 
 const systemPrompt = [
   "Du bist nooryAI, ein islamischer Assistent.",
@@ -119,6 +136,7 @@ export async function POST(req: Request) {
 
     const quraanSources = findQuraanSources(question);
     const hadiithSources = findHadiithSources(question);
+    const databaseHadithSources = findHadithDatabaseSources(question);
 
     const sourceText =
       quraanSources.length > 0
@@ -127,9 +145,13 @@ export async function POST(req: Request) {
             .join("\n")
         : "Keine Quraan-Quelle gefunden.";
 
-    const hadiithText =
-  hadiithSources.length > 0
-    ? hadiithSources
+    const allHadiithSources = [
+  ...hadiithSources,
+  ...databaseHadithSources,
+];
+        const hadiithText =
+  allHadiithSources.length > 0
+    ? allHadiithSources
         .map(
           (source) =>
             [
