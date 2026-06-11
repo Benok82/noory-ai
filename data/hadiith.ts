@@ -132,7 +132,21 @@ export const hadiithCollection = {
       number: "13",
       primarySources: ["Sahih al-Buchari", "Sahih Muslim"],
       topic: "Brüderlichkeit",
-      keywords: ["bruder", "brüder", "bruderschaft", "brüderlichkeit", "liebe", "lieben", "iimaan"],
+      keywords: [
+  "bruder",
+  "brüder",
+  "bruderschaft",
+  "brüderlichkeit",
+  "liebe",
+  "lieben",
+  "iimaan",
+  "ummah",
+  "gemeinschaft",
+  "muslime",
+  "muslimische gemeinschaft",
+  "zusammenhalt",
+  "solidarität"
+],
       translation:
         "Der Iimaan eines Menschen ist nicht vollständig, bis er für seinen Bruder liebt, was er für sich selbst liebt.",
       authenticity: "Muttafaqun 'alayh",
@@ -181,11 +195,13 @@ export const hadiithCollection = {
       primarySources: ["Sahih al-Buchari"],
       topic: "Zorn vermeiden",
       keywords: [
-        "zorn",
-        "wut",
-        "ärger",
-        "aggression"
-      ],
+  "zorn",
+  "wut",
+  "ärger",
+  "aggression",
+  "streit",
+  "ausrasten"
+],
       translation:
         "Werde nicht zornig.",
       authenticity: "Sahih al-Buchari",
@@ -201,11 +217,16 @@ export const hadiithCollection = {
       primarySources: ["at-Tirmidhi"],
       topic: "Taqwaa und guter Charakter",
       keywords: [
-        "taqwaa",
-        "gottesfurcht",
-        "charakter",
-        "benehmen"
-      ],
+  "taqwaa",
+  "gottesfurcht",
+  "charakter",
+  "benehmen",
+  "guter charakter",
+  "akhlaaq",
+  "ethik",
+  "moral",
+  "verhalten"
+],
       translation:
         "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
       authenticity: "Hasan",
@@ -241,11 +262,13 @@ export const hadiithCollection = {
       primarySources: ["Sahih al-Buchari"],
       topic: "Schamhaftigkeit",
       keywords: [
-        "scham",
-        "schamhaftigkeit",
-        "haya",
-        "anstand"
-      ],
+  "scham",
+  "schamhaftigkeit",
+  "haya",
+  "anstand",
+  "sittsamkeit",
+  "bescheidenheit"
+],
       translation:
         "Wenn du keine Scham empfindest, dann tue, was du willst.",
       authenticity: "Sahih al-Buchari",
