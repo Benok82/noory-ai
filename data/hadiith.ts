@@ -16,16 +16,32 @@ export const hadiithCollection = {
 
   dschibriil: [
     {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "2",
-      primarySources: ["Sahih Muslim"],
-      topic: "Islam, Iimaan und Ihsaan",
-      keywords: ["islam", "iimaan", "ihsaan", "dschibriil", "engel dschibriil"],
-      translation:
-        "Der Hadiith von Dschibriil erklärt Islam, Iimaan, Ihsaan und die Zeichen der Stunde.",
-      authenticity: "Sahih Muslim",
-      text: "Der Hadiith von Dschibriil erklärt Islam, Iimaan, Ihsaan und die Zeichen der Stunde.",
-    },
+  collection: "40 Hadiithe an-Nawawii",
+  number: "2",
+  primarySources: ["Sahih Muslim"],
+  topic: "Islam, Iimaan und Ihsaan",
+
+  keywords: [
+    "islam",
+    "iimaan",
+    "glaube",
+    "glaubensgrundlagen",
+    "ihsaan",
+    "dschibriil",
+    "engel dschibriil",
+    "qadar",
+    "engel",
+    "letzter tag"
+  ],
+
+  translation:
+    "Der Hadiith von Dschibriil erklärt Islam, Iimaan, Ihsaan und die Zeichen der Stunde.",
+
+  authenticity: "Sahih Muslim",
+
+  text:
+    "Der Hadiith von Dschibriil erklärt Islam, Iimaan, Ihsaan und die Zeichen der Stunde.",
+},
   ],
 
   saeulen: [
@@ -135,6 +151,144 @@ export const hadiithCollection = {
         "Es soll weder Schaden zugefügt noch Schaden mit Schaden vergolten werden.",
       authenticity: "Hasan",
       text: "Es soll weder Schaden zugefügt noch Schaden mit Schaden vergolten werden.",
+    },
+  ],
+    redenOderSchweigen: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "15",
+      primarySources: ["Sahih al-Buchari", "Sahih Muslim"],
+      topic: "Gutes reden oder schweigen",
+      keywords: [
+        "reden",
+        "schweigen",
+        "sprache",
+        "zunge",
+        "worte"
+      ],
+      translation:
+        "Wer an ALLAAH und den Jüngsten Tag glaubt, soll Gutes sprechen oder schweigen.",
+      authenticity: "Muttafaqun 'alayh",
+      text:
+        "Wer an ALLAAH und den Jüngsten Tag glaubt, soll Gutes sprechen oder schweigen.",
+    },
+  ],
+
+  zorn: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "16",
+      primarySources: ["Sahih al-Buchari"],
+      topic: "Zorn vermeiden",
+      keywords: [
+        "zorn",
+        "wut",
+        "ärger",
+        "aggression"
+      ],
+      translation:
+        "Werde nicht zornig.",
+      authenticity: "Sahih al-Buchari",
+      text:
+        "Werde nicht zornig.",
+    },
+  ],
+
+  taqwaa: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "18",
+      primarySources: ["at-Tirmidhi"],
+      topic: "Taqwaa und guter Charakter",
+      keywords: [
+        "taqwaa",
+        "gottesfurcht",
+        "charakter",
+        "benehmen"
+      ],
+      translation:
+        "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
+      authenticity: "Hasan",
+      text:
+        "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
+    },
+  ],
+
+  vertrauen: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "19",
+      primarySources: ["at-Tirmidhi"],
+      topic: "Vertrauen auf ALLAAH",
+      keywords: [
+        "vertrauen",
+        "tawakkul",
+        "hilfe",
+        "beistand"
+      ],
+      translation:
+        "Bewahre ALLAAH, dann wird ER dich bewahren.",
+      authenticity: "Hasan Sahih",
+      text:
+        "Bewahre ALLAAH, dann wird ER dich bewahren.",
+    },
+  ],
+
+  schamhaftigkeit: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "20",
+      primarySources: ["Sahih al-Buchari"],
+      topic: "Schamhaftigkeit",
+      keywords: [
+        "scham",
+        "schamhaftigkeit",
+        "haya",
+        "anstand"
+      ],
+      translation:
+        "Wenn du keine Scham empfindest, dann tue, was du willst.",
+      authenticity: "Sahih al-Buchari",
+      text:
+        "Wenn du keine Scham empfindest, dann tue, was du willst.",
+    },
+  ],
+    zweifel: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "11",
+      primarySources: ["at-Tirmidhi", "an-Nasaa'i"],
+      topic: "Das Zweifelhafte meiden",
+      keywords: [
+        "zweifel",
+        "zweifelhaft",
+        "gewissheit",
+        "unsicherheit"
+      ],
+      translation:
+        "Lass das, was dich zweifeln lässt, und wende dich dem zu, was dich nicht zweifeln lässt.",
+      authenticity: "Hasan Sahih",
+      text:
+        "Lass das, was dich zweifeln lässt, und wende dich dem zu, was dich nicht zweifeln lässt.",
+    },
+  ],
+    perfektionIslam: [
+    {
+      collection: "40 Hadiithe an-Nawawii",
+      number: "12",
+      primarySources: ["at-Tirmidhi"],
+      topic: "Die Vollkommenheit des Islam",
+      keywords: [
+        "vollkommenheit",
+        "perfektion",
+        "unnütze dinge",
+        "unnütz"
+      ],
+      translation:
+        "Zur Vollkommenheit des Islam eines Menschen gehört, dass er das meidet, was ihn nichts angeht.",
+      authenticity: "Hasan",
+      text:
+        "Zur Vollkommenheit des Islam eines Menschen gehört, dass er das meidet, was ihn nichts angeht.",
     },
   ],
 };

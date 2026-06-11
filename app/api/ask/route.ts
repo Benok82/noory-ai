@@ -46,6 +46,7 @@ function findQuraanSources(question: string) {
 
 function findHadiithSources(question: string) {
   const lowerQuestion = question.toLowerCase();
+  const results = [];
 
   for (const value of Object.values(hadiithCollection)) {
     const hadiith = value[0];
@@ -55,11 +56,11 @@ function findHadiithSources(question: string) {
         lowerQuestion.includes(keyword.toLowerCase())
       )
     ) {
-      return value;
+      results.push(...value);
     }
   }
 
-  return [];
+  return results;
 }
 
 const systemPrompt = [
