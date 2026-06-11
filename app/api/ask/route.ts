@@ -77,12 +77,20 @@ const systemPrompt = [
   "- Wenn lokale Quellen vorhanden sind, verwende diese bevorzugt.",
   "- Wenn Wichtige Lehren vorhanden sind, gib sie unverändert als Liste aus.",
 "- Wenn Praktische Anwendungen vorhanden sind, gib sie unverändert als Liste aus.",
+"- Wichtige Lehren und Praktische Anwendungen müssen vollständig und unverändert übernommen werden.",
+"- Kürze oder formuliere diese Listen nicht um.",
   "- Verwende nur die lokalen Quraan- und Hadiith-Quellen, wenn sie vorhanden sind.",
+  "- Wenn die Frage einem Thema, Keyword oder Begriff aus einer lokalen Hadiith-Quelle entspricht, beantworte die Frage primär mit dieser Hadiith-Quelle.",
+"- Gib in diesem Fall immer das vollständige Hadiith-Format aus, auch wenn der Nutzer nicht ausdrücklich nach einem Hadiith fragt.",
+"- Bevorzuge lokale Hadiith-Quellen gegenüber allgemeinen Definitionen oder eigenem Hintergrundwissen.",
 "- Nenne keine zusätzlichen Hadiithe, Aayaat oder Quellen, die nicht im lokalen Quellenblock stehen.",
 "- Wenn du mehr Kontext gibst, kennzeichne ihn als allgemeine Erklärung und nicht als Quelle.",
 "- Unterscheide zwischen Primärquellen und Sekundärquellen.",
 "- Bei Hadiithen sind Primärquellen (z.B. Sahih al-Buchari, Sahih Muslim) wichtiger als spätere Sammlungen.",
 "- Wenn Primärquellen in der lokalen Datenbank hinterlegt sind, nenne diese ausdrücklich.",
+"- Wenn eine lokale Hadiith-Quelle gefunden wurde, beginne die Antwort sofort mit dem Hadiith-Format.",
+"- Gib keine allgemeine Einleitung oder Definition vor dem Hadiith aus.",
+"- Allgemeine Erklärungen dürfen nur innerhalb des Abschnitts 'Erklärung:' erscheinen.",
 "- Verwende bei Hadiith-Antworten immer dieses Format:",
 "- 📚 Hadiith an-Nawawii Nr. X",
 "- Thema:",
@@ -148,11 +156,11 @@ source.explanation
   : "",
 
 source.lessons
-  ? `Wichtige Lehren: ${source.lessons.join(" | ")}`
+  ? `Wichtige Lehren:\n- ${source.lessons.join("\n- ")}`
   : "",
 
 source.practicalApplications
-  ? `Praktische Anwendungen: ${source.practicalApplications.join(" | ")}`
+  ? `Praktische Anwendungen:\n- ${source.practicalApplications.join("\n- ")}`
   : "",
             ]
               .filter(Boolean)

@@ -260,75 +260,157 @@ export const hadiithCollection = {
   ],
 
   taqwaa: [
-    {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "18",
-      primarySources: ["at-Tirmidhi"],
-      topic: "Taqwaa und guter Charakter",
-      keywords: [
-        "taqwaa",
-        "gottesfurcht",
-        "charakter",
-        "benehmen",
-        "guter charakter",
-        "akhlaaq",
-        "ethik",
-        "moral",
-        "verhalten",
-      ],
-      translation:
-        "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
-      authenticity: "Hasan",
-      text:
-        "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
-    },
-  ],
+  {
+    collection: "40 Hadiithe an-Nawawii",
+    number: "18",
+    primarySources: ["at-Tirmidhi"],
+    topic: "Taqwaa und guter Charakter",
+    keywords: [
+      "taqwaa",
+      "gottesfurcht",
+      "charakter",
+      "benehmen",
+      "guter charakter",
+      "akhlaaq",
+      "ethik",
+      "moral",
+      "verhalten"
+    ],
+    translation:
+      "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
+    explanation:
+      "Dieser Hadiith verbindet drei gewaltige Prinzipien des Islams: Taqwaa gegenüber ALLAAH, Reue nach Fehlern und guten Charakter im Umgang mit Menschen.",
+    lessons: [
+      "Taqwaa ist die Grundlage aller guten Taten.",
+      "Jeder Mensch begeht Fehler und braucht Reue.",
+      "Gute Taten können schlechte Taten auslöschen.",
+      "Guter Charakter gehört zu den wichtigsten Eigenschaften eines Muslims.",
+      "Die Beziehung zu ALLAAH und zu den Menschen muss gepflegt werden."
+    ],
+    practicalApplications: [
+      "Nach jeder Sünde sofort Reue zeigen.",
+      "Regelmäßig gute Taten verrichten.",
+      "Menschen freundlich und respektvoll behandeln.",
+      "Das eigene Verhalten täglich überprüfen.",
+      "Taqwaa in privaten und öffentlichen Situationen bewahren."
+    ],
+    authenticity: "Hasan",
+    text:
+      "Fürchte ALLAAH, wo immer du bist. Lasse einer schlechten Tat eine gute folgen, damit sie sie auslöscht, und begegne den Menschen mit gutem Charakter.",
+  },
+],
 
-  vertrauen: [
-    {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "19",
-      primarySources: ["at-Tirmidhi"],
-      topic: "Vertrauen auf ALLAAH",
-      keywords: ["vertrauen", "tawakkul", "hilfe", "beistand"],
-      translation: "Bewahre ALLAAH, dann wird ER dich bewahren.",
-      authenticity: "Hasan Sahih",
-      text: "Bewahre ALLAAH, dann wird ER dich bewahren.",
-    },
-  ],
+vertrauen: [
+  {
+    collection: "40 Hadiithe an-Nawawii",
+    number: "19",
+    primarySources: ["at-Tirmidhi"],
+    topic: "Vertrauen auf ALLAAH",
+    keywords: [
+      "vertrauen",
+      "tawakkul",
+      "hilfe",
+      "beistand",
+      "allah vertrauen"
+    ],
+    translation:
+      "Bewahre ALLAAH, dann wird ER dich bewahren.",
+    explanation:
+      "Der Prophet ﷺ lehrte Ibn Abbas, dass der Diener seinen Herrn durch Gehorsam bewahrt und dadurch ALLAAHs Schutz, Hilfe und Führung erhält.",
+    lessons: [
+      "ALLAAH beschützt Seine gehorsamen Diener.",
+      "Nutzen und Schaden liegen in ALLAAHs Hand.",
+      "Tawakkul bedeutet Vertrauen auf ALLAAH bei gleichzeitiger Nutzung der erlaubten Mittel.",
+      "Der Gläubige richtet sein Herz auf ALLAAH aus.",
+      "Du'a und Vertrauen gehören zusammen."
+    ],
+    practicalApplications: [
+      "Vor wichtigen Entscheidungen Du'a sprechen.",
+      "Schwierigkeiten mit Tawakkul begegnen.",
+      "Nicht übermäßig von Menschen abhängig sein.",
+      "Erlaubte Mittel nutzen und gleichzeitig auf ALLAAH vertrauen.",
+      "In Prüfungen Geduld zeigen."
+    ],
+    authenticity: "Hasan Sahih",
+    text:
+      "Bewahre ALLAAH, dann wird ER dich bewahren.",
+  },
+],
 
-  schamhaftigkeit: [
-    {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "20",
-      primarySources: ["Sahih al-Buchari"],
-      topic: "Schamhaftigkeit",
-      keywords: [
-        "scham",
-        "schamhaftigkeit",
-        "haya",
-        "anstand",
-        "sittsamkeit",
-        "bescheidenheit",
-      ],
-      translation: "Wenn du keine Scham empfindest, dann tue, was du willst.",
-      authenticity: "Sahih al-Buchari",
-      text: "Wenn du keine Scham empfindest, dann tue, was du willst.",
-    },
-  ],
+schamhaftigkeit: [
+  {
+    collection: "40 Hadiithe an-Nawawii",
+    number: "20",
+    primarySources: ["Sahih al-Buchari"],
+    topic: "Schamhaftigkeit",
+    keywords: [
+      "scham",
+      "schamhaftigkeit",
+      "haya",
+      "anstand",
+      "sittsamkeit",
+      "bescheidenheit"
+    ],
+    translation:
+      "Wenn du keine Scham empfindest, dann tue, was du willst.",
+    explanation:
+      "Der Hadiith zeigt die zentrale Bedeutung von Hayaa im Islam. Schamhaftigkeit schützt den Menschen vor vielen Sünden und hält ihn von schlechtem Verhalten fern.",
+    lessons: [
+      "Hayaa gehört zu den Eigenschaften des Iimaan.",
+      "Scham schützt vor Sünden.",
+      "Ein Verlust der Scham führt oft zu schlechtem Verhalten.",
+      "Der Islam fördert Anstand und Bescheidenheit.",
+      "Innere Scham beeinflusst äußere Handlungen."
+    ],
+    practicalApplications: [
+      "Auf Sprache und Verhalten achten.",
+      "Unangemessene Inhalte meiden.",
+      "Bescheidenheit im Auftreten bewahren.",
+      "Sich bewusst machen, dass ALLAAH alles sieht.",
+      "Kinder zu Anstand und Schamhaftigkeit erziehen."
+    ],
+    authenticity: "Sahih al-Buchari",
+    text:
+      "Wenn du keine Scham empfindest, dann tue, was du willst.",
+  },
+],
 
-  standhaftigkeit: [
-    {
-      collection: "40 Hadiithe an-Nawawii",
-      number: "21",
-      primarySources: ["Sahih Muslim"],
-      topic: "Standhaftigkeit",
-      keywords: ["standhaftigkeit", "standhaft", "istiqaamah", "beständigkeit"],
-      translation: "Sprich: Ich glaube an ALLAAH, und dann sei standhaft.",
-      authenticity: "Sahih Muslim",
-      text: "Sprich: Ich glaube an ALLAAH, und dann sei standhaft.",
-    },
-  ],
+standhaftigkeit: [
+  {
+    collection: "40 Hadiithe an-Nawawii",
+    number: "21",
+    primarySources: ["Sahih Muslim"],
+    topic: "Standhaftigkeit",
+    keywords: [
+      "standhaftigkeit",
+      "standhaft",
+      "istiqaamah",
+      "beständigkeit",
+      "geradlinigkeit"
+    ],
+    translation:
+      "Sprich: Ich glaube an ALLAAH, und dann sei standhaft.",
+    explanation:
+      "Dieser Hadiith fasst den gesamten Weg des Muslims zusammen: richtiger Glaube und Beständigkeit im Handeln.",
+    lessons: [
+      "Der Iimaan muss durch Taten bestätigt werden.",
+      "Beständigkeit ist wichtiger als kurzfristiger Enthusiasmus.",
+      "Der gerade Weg erfordert Geduld.",
+      "Standhaftigkeit gehört zu den Eigenschaften der Rechtschaffenen.",
+      "Erfolg im Diesseits und Jenseits hängt von Istiqaamah ab."
+    ],
+    practicalApplications: [
+      "Gebete regelmäßig verrichten.",
+      "Gute Gewohnheiten langfristig beibehalten.",
+      "Sünden nicht verharmlosen.",
+      "Sich regelmäßig selbst überprüfen.",
+      "ALLAAH um Standhaftigkeit bitten."
+    ],
+    authenticity: "Sahih Muslim",
+    text:
+      "Sprich: Ich glaube an ALLAAH, und dann sei standhaft.",
+  },
+],
 
   ungerechtigkeit: [
     {
